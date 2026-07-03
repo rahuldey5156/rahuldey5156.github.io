@@ -14,6 +14,7 @@
       font-family: 'Share Tech Mono', monospace;
     }
 
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -63,10 +64,84 @@
       height: 20px;
       fill: currentColor;
     }
+
+    /* HOME */
+    #home {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .home-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .home-row.reverse {
+      direction: rtl;
+    }
+
+    .home-row.reverse > * {
+      direction: ltr;
+    }
+
+    .home-img-wrap img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border: 1px solid #00ffff33;
+      filter: grayscale(20%);
+    }
+
+    .home-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .home-text h1 {
+      font-size: 2.8rem;
+      color: #00ffff;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+
+    .cv-link {
+      display: inline-block;
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+      transition: opacity 0.15s;
+    }
+
+    .cv-link:hover { opacity: 0.7; }
+
+    .home-text p {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 700px) {
+      .home-row {
+        grid-template-columns: 1fr;
+      }
+      .home-row.reverse {
+        direction: ltr;
+      }
+    }
   </style>
 </head>
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
@@ -91,6 +166,46 @@
     </a>
   </div>
 </nav>
+
+<!-- HOME SECTION -->
+<section id="home">
+
+  <!-- Row 1: Old College (left) + Intro text (right) -->
+  <div class="home-row">
+    <div class="home-img-wrap">
+      <img src="Old_College.jpeg" alt="Old College, University of Edinburgh" />
+    </div>
+    <div class="home-text">
+      <h1>Rahul Dey</h1>
+      <a href="CV.pdf" target="_blank" class="cv-link">[ view my CV ]</a>
+      <p>I'm Rahul, an MSc Bioinformatics student at the University of Edinburgh, originally from Kolkata, India. I grew up, did my schooling and completed my undergraduate studies there, before moving to Edinburgh in 2025 to pursue my masters. During my MSc, I was awarded the School of Biological Sciences South and South-East Asia Academic Excellence Masters Scholarship.</p>
+      <p>My interest in the computational side of biology took root during my undergrad, where my dissertation involved all-atom molecular dynamics simulations of proteins linked to neurodegenerative disorders. That experience opened my eyes to how powerful computation can be as a tool to understand biology at a mechanistic level.</p>
+    </div>
+  </div>
+
+  <!-- Row 2: Text (left) + McEwan Hall (right) -->
+  <div class="home-row reverse">
+    <div class="home-text">
+      <p>Since then, I've worked across a range of projects — from building RNA-seq and single-cell transcriptomic pipelines, to developing R packages and full-stack bioinformatics web tools. I enjoy the full spectrum of the work: writing clean, reproducible code, designing workflows that others can actually use, and translating complex biological questions into computational solutions. Each project has pushed me to think not just as a biologist, but as a software developer — building tools that are robust, well-documented, and genuinely useful to the research community.</p>
+      <p>I'm currently completing my dissertation at The Roslin Institute, where I'm developing an R package for model-based k-mer analysis of genome data, working toward CRAN submission under the supervision of Dr. Hannes Becher.</p>
+    </div>
+    <div class="home-img-wrap">
+      <img src="McEwan_Hall.jpg" alt="McEwan Hall, University of Edinburgh" />
+    </div>
+  </div>
+
+  <!-- Row 3: New College (left) + Goals + Personal (right) -->
+  <div class="home-row">
+    <div class="home-img-wrap">
+      <img src="New_College.png" alt="New College, University of Edinburgh" />
+    </div>
+    <div class="home-text">
+      <p>Looking ahead, I am actively seeking research assistant roles or similar positions where I can contribute to meaningful computational biology research. My longer-term goal is to pursue a PhD, where I hope to develop novel computational methods or pipelines that address real biological questions — particularly in the areas of genomics, transcriptomics, or functional genomics. I am driven by the belief that well-engineered computational tools can fundamentally change the pace and scale at which we understand living systems.</p>
+      <p>Outside of research, I try to keep a good balance. You'll find me at the gym most mornings, out hiking when the Edinburgh weather allows, experimenting with new recipes in the kitchen, or planning my next trip somewhere new.</p>
+    </div>
+  </div>
+
+</section>
 
 </body>
 </html>
