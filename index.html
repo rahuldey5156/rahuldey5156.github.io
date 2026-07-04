@@ -82,14 +82,6 @@
       align-items: center;
     }
 
-    .home-row.reverse {
-      direction: rtl;
-    }
-
-    .home-row.reverse > * {
-      direction: ltr;
-    }
-
     .home-img-wrap img {
       width: 100%;
       height: 320px;
@@ -132,9 +124,6 @@
     @media (max-width: 700px) {
       .home-row {
         grid-template-columns: 1fr;
-      }
-      .home-row.reverse {
-        direction: ltr;
       }
     }
   </style>
@@ -184,7 +173,7 @@
   </div>
 
   <!-- Row 2: Text (left) + McEwan Hall (right) -->
-  <div class="home-row reverse">
+  <div class="home-row">
     <div class="home-text">
       <p>Since then, I've worked across a range of projects — from building RNA-seq and single-cell transcriptomic pipelines, to developing R packages and full-stack bioinformatics web tools. I enjoy the full spectrum of the work: writing clean, reproducible code, designing workflows that others can actually use, and translating complex biological questions into computational solutions. Each project has pushed me to think not just as a biologist, but as a software developer — building tools that are robust, well-documented, and genuinely useful to the research community.</p>
       <p>I'm currently completing my dissertation at The Roslin Institute, where I'm developing an R package for model-based k-mer analysis of genome data, working toward CRAN submission under the supervision of Dr. Hannes Becher.</p>
