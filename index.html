@@ -122,62 +122,84 @@
     }
 
     /* TIMELINE */
+    .timeline-heading {
+      font-size: 1.3rem;
+      color: #00ffff;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.5rem;
+    }
+
     .timeline {
       display: flex;
       flex-direction: column;
       gap: 0;
-      margin-top: 0.5rem;
     }
 
     .timeline-item {
-      display: flex;
-      flex-direction: column;
-      padding-left: 1.5rem;
+      display: grid;
+      grid-template-columns: 100px 24px 1fr;
+      align-items: start;
       position: relative;
     }
 
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 6px;
+    .timeline-year {
+      font-size: 13px;
+      color: #00ffff;
+      padding-top: 0.1rem;
+      text-align: right;
+      padding-right: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .timeline-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .timeline-dot {
       width: 8px;
       height: 8px;
       border: 1px solid #00ffff;
       background: #000;
       transform: rotate(45deg);
+      margin-top: 4px;
+      flex-shrink: 0;
     }
 
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      left: 3px;
-      top: 14px;
+    .timeline-line {
       width: 1px;
-      height: calc(100% + 8px);
-      background: #00ffff33;
+      flex: 1;
+      background: repeating-linear-gradient(
+        to bottom,
+        #00ffff55 0px,
+        #00ffff55 4px,
+        transparent 4px,
+        transparent 8px
+      );
+      min-height: 40px;
     }
 
-    .timeline-item:last-child::after {
+    .timeline-item:last-child .timeline-line {
       display: none;
     }
 
+    .timeline-content {
+      padding-left: 0.8rem;
+      padding-bottom: 1.8rem;
+    }
+
     .timeline-degree {
-      font-size: 15px;
-      color: #00ffff;
-      margin-bottom: 0.25rem;
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 0.2rem;
+      border-top: 1px solid #00ffff33;
+      padding-top: 0.1rem;
     }
 
     .timeline-school {
-      font-size: 14px;
-      color: #aaa;
-      margin-bottom: 0.25rem;
-    }
-
-    .timeline-year {
       font-size: 13px;
-      color: #888;
-      margin-bottom: 1.5rem;
+      color: #aaa;
     }
 
     @media (max-width: 700px) {
@@ -224,16 +246,29 @@
     <div class="home-text">
       <h1>Rahul Dey</h1>
       <a href="CV.pdf" target="_blank" class="cv-link">[ view my CV ]</a>
+      <div class="timeline-heading">// my_timeline</div>
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-degree">MSc Bioinformatics</div>
-          <div class="timeline-school">The University of Edinburgh</div>
           <div class="timeline-year">2025 – 2026</div>
+          <div class="timeline-spine">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-degree">MSc Bioinformatics</div>
+            <div class="timeline-school">The University of Edinburgh</div>
+          </div>
         </div>
         <div class="timeline-item">
-          <div class="timeline-degree">BSc (Hons.) Biotechnology — First Class</div>
-          <div class="timeline-school">Sister Nivedita University, Kolkata</div>
           <div class="timeline-year">2022 – 2025</div>
+          <div class="timeline-spine">
+            <div class="timeline-dot"></div>
+            <div class="timeline-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-degree">BSc (Hons.) Biotechnology — First Class</div>
+            <div class="timeline-school">Sister Nivedita University, Kolkata</div>
+          </div>
         </div>
       </div>
     </div>
@@ -259,7 +294,7 @@
     </div>
     <div class="home-text">
       <p>Looking ahead, I am actively seeking research assistant roles or similar positions where I can contribute to meaningful computational biology research. My longer-term goal is to pursue a PhD, where I hope to develop novel computational methods or pipelines that address real biological questions — particularly in the areas of genomics, transcriptomics, or functional genomics. I am driven by the belief that well-engineered computational tools can fundamentally change the pace and scale at which we understand living systems.</p>
-      <p>Outside of research, I try to keep a good balance. You'll find me at the gym most mornings, out hiking when the Edinburgh weather allows, experimenting with new recipes in the kitchen, or planning my next trip somewhere new.</p>
+      <p>Outside of research, I try to keep a good balance. You will find me at the gym most evenings, out hiking when the Edinburgh weather allows, experimenting with new recipes in the kitchen, or planning my next trip somewhere new.</p>
     </div>
   </div>
 
