@@ -122,90 +122,176 @@
     }
 
     /* TIMELINE */
-.timeline-heading {
-  font-size: 1.4rem;
-  color: #00ffff;
-  letter-spacing: 0.08em;
-  margin-bottom: 2rem;
-}
+    .timeline-heading {
+      font-size: 1.4rem;
+      color: #00ffff;
+      letter-spacing: 0.08em;
+      margin-bottom: 2rem;
+    }
 
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 110px 24px 1fr;
-  align-items: start;
-  position: relative;
-}
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px 24px 1fr;
+      align-items: start;
+      position: relative;
+    }
 
-.timeline-year {
-  font-size: 14px;
-  color: #00ffff;
-  padding-top: 0.1rem;
-  text-align: right;
-  padding-right: 0.8rem;
-  line-height: 1.4;
-}
+    .timeline-year {
+      font-size: 14px;
+      color: #00ffff;
+      padding-top: 0.1rem;
+      text-align: right;
+      padding-right: 0.8rem;
+      line-height: 1.4;
+    }
 
-.timeline-spine {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-}
+    .timeline-spine {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+    }
 
-.timeline-dot {
-  width: 10px;
-  height: 10px;
-  border: 2px solid #00ffff;
-  background: #000;
-  transform: rotate(45deg);
-  margin-top: 6px;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 1;
-}
+    .timeline-dot {
+      width: 10px;
+      height: 10px;
+      border: 2px solid #00ffff;
+      background: #000;
+      transform: rotate(45deg);
+      margin-top: 6px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
 
-.timeline-line {
-  width: 2px;
-  flex: 1;
-  min-height: 30px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #00ffff 0px,
-    #00ffff 6px,
-    transparent 6px,
-    transparent 12px
-  );
-  margin-top: 4px;
-}
+    .timeline-line {
+      width: 2px;
+      flex: 1;
+      min-height: 30px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #00ffff 0px,
+        #00ffff 6px,
+        transparent 6px,
+        transparent 12px
+      );
+      margin-top: 4px;
+    }
 
-.timeline-item:last-child .timeline-line {
-  display: none;
-}
+    .timeline-item:last-child .timeline-line {
+      display: none;
+    }
 
-.timeline-content {
-  padding-left: 1rem;
-  padding-bottom: 1.2rem;
-}
+    .timeline-content {
+      padding-left: 1rem;
+      padding-bottom: 1.2rem;
+    }
 
-.timeline-degree {
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 0.4rem;
-  border-top: 2px solid #00ffff;
-  padding-top: 0.8rem;
-  margin-top: 0;
-}
+    .timeline-degree {
+      font-size: 16px;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      border-top: 2px solid #00ffff;
+      padding-top: 0.8rem;
+      margin-top: 0;
+    }
 
-.timeline-school {
-  font-size: 14px;
-  color: #aaa;
-}
+    .timeline-school {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* SECTION HEADING */
+    .section-heading {
+      font-size: 1.4rem;
+      color: #00ffff;
+      letter-spacing: 0.08em;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid #00ffff33;
+      padding-bottom: 0.8rem;
+    }
+
+    /* PROJECTS */
+    #projects {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 2.5rem;
+    }
+
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .project-item {
+      border-left: 2px solid #00ffff33;
+      padding-left: 1.2rem;
+      transition: border-color 0.2s;
+    }
+
+    .project-item:hover {
+      border-left-color: #00ffff;
+    }
+
+    .project-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .project-title {
+      font-size: 15px;
+      color: #fff;
+      letter-spacing: 0.04em;
+    }
+
+    .project-title span {
+      color: #00ffff;
+      margin-right: 0.5rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-shrink: 0;
+    }
+
+    .project-link {
+      font-size: 12px;
+      color: #00ffff;
+      text-decoration: none;
+      border: 1px solid #00ffff44;
+      padding: 2px 10px;
+      letter-spacing: 0.06em;
+      transition: background 0.15s;
+    }
+
+    .project-link:hover {
+      background: #00ffff22;
+    }
+
+    .project-desc {
+      font-size: 13px;
+      color: #aaa;
+      line-height: 1.8;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-tools {
+      font-size: 12px;
+      color: #00ffff99;
+      letter-spacing: 0.04em;
+    }
 
     @media (max-width: 700px) {
       .home-row {
@@ -285,7 +371,7 @@
       <p>I am Rahul, an MSc Bioinformatics student at the University of Edinburgh, originally from Kolkata, India. I grew up, did my schooling and completed my undergraduate studies there, before moving to Edinburgh in 2025 to pursue my masters. During my MSc, I was awarded the School of Biological Sciences South and South-East Asia Academic Excellence Masters Scholarship.</p>
       <p>My interest in the computational side of biology took root during my undergrad, where my dissertation involved all-atom molecular dynamics simulations of proteins linked to neurodegenerative disorders. That experience opened my eyes to how powerful computation can be as a tool to understand biology at a mechanistic level.</p>
       <p>Since then, I have worked across a range of projects — from building RNA-seq and single-cell transcriptomic pipelines, to developing R packages and full-stack bioinformatics web tools. I enjoy the full spectrum of the work: writing clean, reproducible code, designing workflows that others can actually use, and translating complex biological questions into computational solutions. Each project has pushed me to think not just as a biologist, but as a software developer — building tools that are robust, well-documented, and genuinely useful to the research community.</p>
-      <p>I am currently completing my dissertation at The Roslin Institute, where I'm developing an R package for model-based k-mer analysis of genome data, working toward CRAN submission under the supervision of Dr. Hannes Becher.</p>
+      <p>I am currently completing my dissertation at The Roslin Institute, where I am developing an R package for model-based k-mer analysis of genome data, working toward CRAN submission under the supervision of Dr. Hannes Becher.</p>
     </div>
     <div class="home-img-wrap">
       <img src="McEwan_Hall.jpg" alt="McEwan Hall, University of Edinburgh" />
@@ -303,6 +389,70 @@
     </div>
   </div>
 
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <div class="section-heading">// Projects</div>
+  <div class="project-list">
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title"><span>&gt; 01.</span> Single-Cell RNA-seq Analysis of Mouse Embryonic Stem Cells</div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/rahuldey5156/Single-Cell-RNA-seq-Analysis" target="_blank" rel="noopener">[ GitHub ]</a>
+        </div>
+      </div>
+      <div class="project-desc">Reproduced and extended a published scRNA-seq study using 869 mouse embryonic stem cells across 3 conditions. Built end-to-end pipelines in both R and Python, comparing scran, Seurat, and Scanpy methodologies. Identified a rare 2C-like totipotent subpopulation via Zscan4 family gene expression.</div>
+      <div class="project-tools">tools: R · Seurat · Bioconductor · Python · Scanpy · Kallisto · FastQC · Git</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title"><span>&gt; 02.</span> MTR4-Mediated RNA Surveillance in Mouse Spermatogenesis</div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/rahuldey5156/Functional-Genomic-Technologies" target="_blank" rel="noopener">[ GitHub ]</a>
+        </div>
+      </div>
+      <div class="project-desc">Analysed a large-scale RNA-seq dataset (GSE253154) to investigate MTR4's role in RNA surveillance during spermatogonial differentiation. Performed differential expression with DESeq2, pathway enrichment with fgsea, and exploratory PCA and clustering to detect transcriptomic differences between conditions.</div>
+      <div class="project-tools">tools: R · DESeq2 · fgsea · STAR · featureCounts · BiomaRt · MSigDB · Git</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title"><span>&gt; 03.</span> ProtExplorer — Web-Based Protein Sequence Analysis Tool</div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/rahuldey5156/IWD2" target="_blank" rel="noopener">[ GitHub ]</a>
+          <a class="project-link" href="https://bioinfmsc8.bio.ed.ac.uk/~s2793337/Website/" target="_blank" rel="noopener">[ Live ]</a>
+        </div>
+      </div>
+      <div class="project-desc">Developed a full-stack bioinformatics web platform for automated comparative protein sequence analysis. Implemented a six-stage pipeline integrating NCBI Entrez, Clustal Omega alignment, PROSITE motif scanning, phylogenetic tree construction, and AlphaFold structure lookup. Built an interactive phylogenetic tree visualisation using D3.js with zoom, pan, and node collapse.</div>
+      <div class="project-tools">tools: PHP · MySQL · Python · BioPython · Clustal Omega · D3.js · EMBOSS · Git</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title"><span>&gt; 04.</span> Automated RNA-seq Analysis Pipeline on HPC</div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/rahuldey5156/My-FIrst-Pipeline" target="_blank" rel="noopener">[ GitHub ]</a>
+        </div>
+      </div>
+      <div class="project-desc">Developed automated RNA-seq processing workflows using Bash scripting in a Linux environment. Integrated FastQC, Bowtie2, and Bedtools for quality control, alignment, and downstream processing. Executed pipelines on HPC clusters using SLURM for job scheduling and resource allocation.</div>
+      <div class="project-tools">tools: Bash · FastQC · Bowtie2 · Bedtools · SLURM · HPC · Git</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title"><span>&gt; 05.</span> Python-Based Protein Sequence Profiling Tool</div>
+        <div class="project-links">
+          <a class="project-link" href="https://github.com/rahuldey5156/Bioinformatics-Programming-And-Systems-Management" target="_blank" rel="noopener">[ GitHub ]</a>
+        </div>
+      </div>
+      <div class="project-desc">Built a modular Python pipeline for protein sequence profiling with automated taxonomic filtering and reproducible output generation. Designed with clear error handling and wrote a user manual for non-specialist users.</div>
+      <div class="project-tools">tools: Python · EMBOSS · PROSITE · Clustal Omega · NCBI EDirect · Git</div>
+    </div>
+
+  </div>
 </section>
 
 </body>
