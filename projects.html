@@ -66,29 +66,6 @@
       fill: currentColor;
     }
 
-    .nav-toggle {
-      display: none;
-      background: none;
-      border: none;
-      color: #00ffff;
-      width: 28px;
-      height: 22px;
-      padding: 0;
-      cursor: pointer;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .nav-toggle span {
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: #00ffff;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-    .nav-toggle.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
-    .nav-toggle.open span:nth-child(2) { opacity: 0; }
-    .nav-toggle.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
-
     /* PROJECTS */
     #projects {
       max-width: 1100px;
@@ -173,51 +150,19 @@
       color: #00ffff99;
       letter-spacing: 0.04em;
     }
-
-    @media (max-width: 700px) {
-      nav { padding: 0 1.2rem; }
-      .nav-toggle { display: flex; }
-      .nav-links {
-        position: absolute;
-        top: 52px;
-        left: 0;
-        right: 0;
-        background: #000;
-        border-bottom: 1px solid #00ffff33;
-        flex-direction: column;
-        gap: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .nav-links.open { max-height: 300px; }
-      .nav-links li { width: 100%; }
-      .nav-links a {
-        display: block;
-        padding: 0.9rem 1.5rem;
-        border-bottom: 1px solid #00ffff1a;
-      }
-      .nav-icons { gap: 0.9rem; }
-
-      #projects { padding: 2.5rem 1.5rem; }
-      .project-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-    }
   </style>
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav>
-  <ul class="nav-links" id="navLinks">
+  <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="projects.html" class="active">Projects</a></li>
     <li><a href="experience.html">Experience</a></li>
     <li><a href="skills.html">Skills</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
 
   <div class="nav-icons">
     <a href="https://www.linkedin.com/in/rahuldey5156/" target="_blank" rel="noopener" title="LinkedIn">
@@ -240,7 +185,16 @@
 
     <div class="project-item">
       <div class="project-header">
-        <div class="project-title"><span>&gt; 01.</span> Single-Cell RNA-seq Analysis of Mouse Embryonic Stem Cells</div>
+        <div class="project-title"><span>&gt; 01.</span> De Novo Genome Assembly and Interspecific Comparison of S. herbacea Chromosome 8</div>
+        <div class="project-links"></div>
+      </div>
+      <div class="project-desc">Performed hybrid de novo assembly of Salix herbacea Chromosome 8 using PacBio HiFi long-reads and Illumina short-reads, benchmarking Hifiasm against Miniasm approaches. Evaluated assembly quality using QUAST and BUSCO, achieving 11.8% conserved gene recovery — more than double the 5.2% expected for a single linkage group. Quantified interspecific genomic divergence between S. herbacea and S. lanata via cross-species short-read mapping with BWA-MEM.</div>
+      <div class="project-tools">tools: Hifiasm · Miniasm · Minimap2 · BWA-MEM · Samtools · BUSCO · QUAST · NanoPlot · FastQC · Cutadapt · Bandage · Linux</div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title"><span>&gt; 02.</span> Single-Cell RNA-seq Analysis of Mouse Embryonic Stem Cells</div>
         <div class="project-links">
           <a class="project-link" href="https://github.com/rahuldey5156/Single-Cell-RNA-seq-Analysis" target="_blank" rel="noopener">[ GitHub ]</a>
         </div>
@@ -251,7 +205,7 @@
 
     <div class="project-item">
       <div class="project-header">
-        <div class="project-title"><span>&gt; 02.</span> MTR4-Mediated RNA Surveillance in Mouse Spermatogenesis</div>
+        <div class="project-title"><span>&gt; 03.</span> MTR4-Mediated RNA Surveillance in Mouse Spermatogenesis</div>
         <div class="project-links">
           <a class="project-link" href="https://github.com/rahuldey5156/Functional-Genomic-Technologies" target="_blank" rel="noopener">[ GitHub ]</a>
         </div>
@@ -262,7 +216,7 @@
 
     <div class="project-item">
       <div class="project-header">
-        <div class="project-title"><span>&gt; 03.</span> ProtExplorer — Web-Based Protein Sequence Analysis Tool</div>
+        <div class="project-title"><span>&gt; 04.</span> ProtExplorer — Web-Based Protein Sequence Analysis Tool</div>
         <div class="project-links">
           <a class="project-link" href="https://github.com/rahuldey5156/IWD2" target="_blank" rel="noopener">[ GitHub ]</a>
           <a class="project-link" href="https://bioinfmsc8.bio.ed.ac.uk/~s2793337/Website/" target="_blank" rel="noopener">[ Live ]</a>
@@ -274,24 +228,13 @@
 
     <div class="project-item">
       <div class="project-header">
-        <div class="project-title"><span>&gt; 04.</span> Lizard-Insect-Berry Simulation — Refactoring, Testing and Performance Analysis</div>
-        <div class="project-links">
-          <a class="project-link" href="https://github.com/rahuldey5156/Software-Engineering—lizard-simulation" target="_blank" rel="noopener">[ GitHub ]</a>
-        </div>
-      </div>
-      <div class="project-desc">Refactored a monolithic 150-line simulation function into 10 focused, testable functions, introducing a SimulationConfig dataclass, named constants and unified BFS logic, achieving a pylint score of 10.00/10. Built an 84-test automated suite with pytest reaching 77% code coverage, and ran a controlled performance experiment across grid sizes profiled with cProfile, managed through a full Git/GitLab CI workflow.</div>
-      <div class="project-tools">tools: Python · pytest · pytest-cov · pylint · cProfile · matplotlib · Git · GitLab CI</div>
-    </div>
-
-    <div class="project-item">
-      <div class="project-header">
-        <div class="project-title"><span>&gt; 05.</span> Automated RNA-seq Analysis Pipeline on HPC</div>
+        <div class="project-title"><span>&gt; 05.</span> Automated Containerised RNA-seq Analysis Pipeline Using Snakemake on HPC</div>
         <div class="project-links">
           <a class="project-link" href="https://github.com/rahuldey5156/My-FIrst-Pipeline" target="_blank" rel="noopener">[ GitHub ]</a>
         </div>
       </div>
-      <div class="project-desc">Developed automated RNA-seq processing workflows using Bash scripting in a Linux environment. Integrated FastQC, Bowtie2, and Bedtools for quality control, alignment, and downstream processing. Executed pipelines on HPC clusters using SLURM for job scheduling and resource allocation.</div>
-      <div class="project-tools">tools: Bash · FastQC · Bowtie2 · Bedtools · SLURM · HPC · Git</div>
+      <div class="project-desc">Developed a reproducible Snakemake workflow to automate RNA-seq processing, integrating FastQC, Bowtie2 and Bedtools for quality control, alignment and downstream processing. Containerised bioinformatics tools using Apptainer and deployed the workflow on HPC clusters using SLURM for job scheduling and resource management.</div>
+      <div class="project-tools">tools: Snakemake · Bash · Apptainer · FastQC · Bowtie2 · Bedtools · SLURM · HPC · Git</div>
     </div>
 
     <div class="project-item">
@@ -307,16 +250,6 @@
 
   </div>
 </section>
-
-<script>
-  var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
-  navToggle.addEventListener('click', function () {
-    var isOpen = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open', isOpen);
-    navToggle.setAttribute('aria-expanded', isOpen);
-  });
-</script>
 
 </body>
 </html>
